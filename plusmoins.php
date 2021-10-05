@@ -7,24 +7,27 @@ $max = 50;
 $aleatoire = rand($min, $max);
     // echo $aleatoire . PHP_EOL;
 
-// Boucle de nombre de vie
+// Choisi le nombre de vie
+$vies = 5;
 
-for ($i = 1; $i < 5; $i++) {
+$vieperdu = $vies - 1;
+
+for ($i = 0; $i < $vies; $i++) {
     
 // Choisi ton chiffre 
 
-$chiffrechoisi = readline("Mon nombre est : ");
+$chiffrechoisi = readline("Choisi ton nombre : ");
 
 // Si le nombre est supérieur
 
     if ($chiffrechoisi < $aleatoire) {
-        echo ("C'est plus") . PHP_EOL . PHP_EOL;
+        echo ("C'est plus ! Tu viens de perdre une vie. Il t'en reste $vieperdu.") . PHP_EOL . PHP_EOL;
     }
 
 // Si le nombre est inférieur
 
     elseif ($chiffrechoisi > $aleatoire) {
-        echo ("C'est moins") . PHP_EOL . PHP_EOL;
+        echo ("C'est moins ! Tu viens de perdre une vie. Il t'en reste $vieperdu.") . PHP_EOL . PHP_EOL;
     }
 
 // Si l'utilisateur a trouvé le nombre
